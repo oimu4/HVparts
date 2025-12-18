@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HV Parts | Premium Auto Parts</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <div class="logo">HV <span>Parts</span></div>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#shop">Shop Parts</a>
+                <button class="btn-login" onclick="toggleLogin()">Log In</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Upgrade Your Ride</h1>
+            <p>High-performance parts for serious drivers.</p>
+            <a href="#shop" class="hero-btn">Shop Now</a>
+        </div>
+    </div>
+
+    <div class="categories">
+        <div class="cat-card"><i class="fas fa-car-battery"></i><h3>Batteries</h3></div>
+        <div class="cat-card"><i class="fas fa-oil-can"></i><h3>Oil & Fluids</h3></div>
+        <div class="cat-card"><i class="fas fa-cogs"></i><h3>Engine</h3></div>
+        <div class="cat-card"><i class="fas fa-tachometer-alt"></i><h3>Performance</h3></div>
+    </div>
+
+    <div class="container" id="shop">
+        <h2 class="section-title">Featured Parts</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-img"><i class="fas fa-car-side"></i></div>
+                <div class="product-info">
+                    <p class="product-cat">Brakes</p>
+                    <h3 class="product-title">Ceramic Brake Pads</h3>
+                    <div class="product-price">$45.99</div>
+                    <button class="btn-add">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img"><i class="fas fa-compact-disc"></i></div>
+                <div class="product-info">
+                    <p class="product-cat">Wheels</p>
+                    <h3 class="product-title">Alloy Rim 19" Matte</h3>
+                    <div class="product-price">$189.00</div>
+                    <button class="btn-add">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="loginModal">
+        <div class="login-box">
+            <span class="close-btn" onclick="toggleLogin()">&times;</span>
+            <div class="login-header">
+                <h2>Welcome Back</h2>
+                <p>Login to HV Parts</p>
+            </div>
+            <form>
+                <div class="input-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="you@example.com">
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="••••••••">
+                </div>
+                <button type="button" class="btn-submit" onclick="alert('Success!')">Log In</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 HV Parts. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleLogin() {
+            const modal = document.getElementById('loginModal');
+            modal.style.display = (modal.style.display === 'flex') ? 'none' : 'flex';
+        }
+    </script>
+</body>
+</html>
